@@ -9,10 +9,6 @@
     (let [result (adds-one 2)]
       (should= 3 result)))
 
-;(describe "wrap-print-req prints the method"
-;  (it "accepts a request"
-;    (wrap-print-req) mock :put "/kevin" "is this content?"))
-
   (it "tests multiple-let"
       (let [result (multiple-let 2)]
         (should= 12 result)))
@@ -25,16 +21,31 @@
     (let [response (handler mock/request)]
       (should= 200 (:status response) )))
 
-  (it "test a response field from just a middleware"
-    (let [handler (wrap-body-replace identity)]
-       (let [request  {:headers {"content-type" "application/xml"} }
-             response (handler request)]
-         (should= "Body snatcher!"  (:body response)))))
+  (it "test a response field from just a POST middleware"
+    (let [handler (wrap-post identity)]
+      (let [request  {:request-method :post}
+            response (handler request)]
+        (should= "POST snatcher!"  (:body response)))))
 
   (it "test an entire response from just a middleware"
     (let [handler (wrap-body-replace identity)]
       (let [request {}
             response (handler request)]
-        (should= {:body "Body snatcher!"}  (identity response)))))
-)
+        (should= {:body "Body snatcher is scary!"}  (identity response)))))
 
+
+  (it "test method specific modification POST"
+    (let [handler (wrap-post identity)]
+      (let [request  {:request-method :post :headers {"content-type" "application/xml"} }
+            response (handler request)]
+        (should= "POST snatcher!"  (:body response)))))
+
+  (it "test method specific modification GET"
+    (let [response (handler mock/request)]
+    ;(let [handler (wrap-post identity)]
+      (let [request  {:request-method "GET" :headers {"content-type" "application/xml"} }
+            response (handler request)]
+        ;(should= "Body snatcher is scary!"  (:body response)))))
+          (should= "Kevin, you freak!"  (:body response)))))
+
+          )

@@ -3,14 +3,12 @@
   (:use ring.adapter.jetty)
   (:use ring.middleware.resource)
   (:use ring.middleware.content-type)
-  (:use ring.middleware.not-modified))
+  (:use ring.middleware.not-modified)
+  (:use clostache.parser))
 
 
 (defn adds-one [x]
   (+ x 1))
-
-(defn adds-two [x]
-  (+ x 2))
 
 (defn multiple-let [x]
   (let [y x
@@ -29,16 +27,37 @@
 
 (defn wrap-age [handler]
   (fn [request]
-    (println request)
+    ;(println request)
     (let [response (handler request)]
       (assoc-in response [:headers  "Age"] "777")
       )))
 
 (defn wrap-body-replace [handler]
   (fn [request]
-    (println request)
+    ;(println (str "...wrap-body-replace found method: " (:request-method request)) )
     (let [response (handler request)]
-      (assoc response :body "Body snatcher!")
+      (assoc response :body "Body snatcher is scary!")
+      )))
+
+(defn wrap-post [handler]
+  (fn [request]
+    ;(println (str "...wrap-post found method: " (:request-method request)) )
+    (if (true? (= (:request-method request) :post) )
+      (let [response (handler request)]
+        (assoc response :body "POST snatcher!") )
+      (let [response (handler request)]
+        (identity response) )
+    )))
+
+(defn wrap-template [handler]
+  (fn [request]
+    (if (true? (= (:request-method request) :put) )
+      (let [response (handler request)]
+        (assoc response :body
+          (render-resource "templates/hello.mustache" {:name "Kevin"})
+           ))
+      (let [response (handler request)]
+        (identity response) )
       )))
 
 (defn handler [req]
@@ -47,11 +66,13 @@
    :body (str "Kevin, you freak!") })
 
 (def app
-   (-> handler
+  (-> handler
+       (wrap-resource "public")
        (wrap-body-replace)
+       (wrap-post)
+       (wrap-template)
        (wrap-age)
        (wrap-auth)
-       (wrap-resource "public")
        (wrap-content-type)
        (wrap-not-modified)
        (wrap-reload) ))
