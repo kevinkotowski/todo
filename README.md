@@ -1,10 +1,10 @@
 # todo
 
-A Clojure library designed to ... well, that part is up to you.
+My first Clojure library designed to manage a TODO list.
 
 ## Usage
 
-FIXME
+Are you sure you want to use this?
 
 ## License
 

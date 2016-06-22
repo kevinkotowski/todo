@@ -1,0 +1,17 @@
+{
+:ssl-client-cert nil, 
+:protocol HTTP/1.1, 
+:remote-addr 0:0:0:0:0:0:0:1, 
+:headers {cache-control max-age=0, accept text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8, upgrade-insecure-requests 1, connection keep-alive, user-agent Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36, host localhost:54321, accept-encoding gzip, deflate, sdch, accept-language en-US,en;q=0.8}, 
+:server-port 54321, 
+:content-length nil, 
+:content-type nil, 
+:character-encoding nil, 
+:uri /, 
+:server-name localhost, 
+:query-string nil, 
+:body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x36828046 HttpInputOverHTTP@36828046], 
+:scheme :http, 
+:request-method :get
+}
+
