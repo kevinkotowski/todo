@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed1504c-befc-410b-923c-025802dd37ea" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/replstate.xml" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/todo.iml" afterPath="$PROJECT_DIR$/.idea/todo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/public/kevin.html" afterPath="$PROJECT_DIR$/resources/public/kevin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/todo/core_spec.clj" afterPath="$PROJECT_DIR$/spec/todo/core_spec.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/core.clj" afterPath="$PROJECT_DIR$/src/todo/core.clj" />
     </list>
@@ -33,18 +34,28 @@
           <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/project.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+            <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="74">
-                  <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+                <state relative-caret-position="270">
+                  <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -64,11 +75,31 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="true">
+          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="kevin.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/public/kevin.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/spec/playground/core_spec.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="359">
+                  <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -77,6 +108,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,11 +129,15 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/todo/core_test.clj" />
-        <option value="$PROJECT_DIR$/resources/public/kevin.html" />
-        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/templates/hello.mustache" />
-        <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/todo/playground.clj" />
+        <option value="$PROJECT_DIR$/spec/todo/playground_spec.clj" />
         <option value="$PROJECT_DIR$/src/todo/core.clj" />
+        <option value="$PROJECT_DIR$/resources/public/kevin.html" />
+        <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
+        <option value="$PROJECT_DIR$/spec/playground/core_spec.clj" />
+        <option value="$PROJECT_DIR$/src/playground/core.clj" />
       </list>
     </option>
   </component>
@@ -180,11 +222,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playground" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,11 +318,16 @@
     <property name="ToolWindowTerminal.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/playground" />
+      <recent name="$PROJECT_DIR$/spec/playground" />
       <recent name="$PROJECT_DIR$/src/todo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1466631662068">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1466700586220">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.todo">
     <configuration default="false" name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="todo" />
@@ -722,22 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/kevin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/hello.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -746,18 +813,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+    <entry file="file://$PROJECT_DIR$/src/todo/playground/clj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/playground/playground_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/playground/playground.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/kevin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="330">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/playground/core_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
           <folding />
         </state>
       </provider>

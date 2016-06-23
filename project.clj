@@ -7,6 +7,7 @@
                  [ring/ring "1.5.0"]
                  [ring/ring-mock "0.3.0"]
                  [de.ubercode.clostache/clostache "1.4.0"]
+                 [com.taoensso/carmine "2.13.1"]
                  [speclj "3.3.2"]]
   :dev-dependencies [[ring/ring-devel "1.5.0"]
                      ]
