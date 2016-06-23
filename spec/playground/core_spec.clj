@@ -1,7 +1,7 @@
 (ns playground.core-spec
   (:require [playground.core :refer :all]
             [speclj.core :refer :all]
-            [ring.mock.request :as mock] )
+            )
   (:use clojure.java.io)
   )
 
@@ -15,11 +15,15 @@
         (should= 12 result)))
 
   (it "test a response from the app"
-      (let [response (player mock/request)]
+      (let [request (hash-map :request-method :get
+                              :uri "/")
+            response (player request)]
+        ;(println response)))
         (should= "777" ((:headers response) "Age") )))
 
   (it "test a response from just the handler"
-      (let [response (handler mock/request)]
+      (let [request (hash-map :request-method :get )
+            response (handler request)]
         (should= 200 (:status response) )))
 
   (it "test a response field from just a POST middleware"
@@ -41,14 +45,12 @@
           (should= "POST snatcher!"  (:body response)))))
 
   (it "test GET default"
-      (let [response (handler mock/request)]
-        (let [request  {:request-method "GET" :headers {"content-type" "application/xml"} }
-              response (handler request)]
-          (should= "Kevin, you freak!"  (:body response)))))
+    (let [request  {:request-method "GET" :headers {"content-type" "application/xml"} }
+          response (handler request)]
+      (should= "Kevin, you freak!"  (:body response))))
 
   (it "gets file resource response from specific uri"
-    (let [request
-          (hash-map :uri "/kevin.html"
+    (let [request (hash-map :uri "/kevin.html"
                     :request-method :get )
           response (player request)]
       (with-open [rdr (reader (:body response))]
