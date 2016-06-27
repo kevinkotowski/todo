@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed1504c-befc-410b-923c-025802dd37ea" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/list.mustache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/todo/persist.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/todo/template.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/replstate.xml" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/public/kevin.html" afterPath="$PROJECT_DIR$/resources/public/kevin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/hello.mustache" afterPath="$PROJECT_DIR$/resources/templates/hello.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/playground/core_spec.clj" afterPath="$PROJECT_DIR$/spec/playground/core_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/todo/core_spec.clj" afterPath="$PROJECT_DIR$/spec/todo/core_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/core.clj" afterPath="$PROJECT_DIR$/src/todo/core.clj" />
     </list>
     <ignored path="todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +43,8 @@
           <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/project.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -40,18 +53,28 @@
           <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+                <state relative-caret-position="-1">
+                  <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
+          <file leaf-file-name="persist.clj" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-451">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <state relative-caret-position="435">
+                  <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="template.clj" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/todo/template.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -67,6 +90,46 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="list.mustache" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/templates/tasks/list.mustache">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="new.mustache" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/templates/tasks/new.mustache">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="delete.mustache" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/templates/tasks/delete.mustache">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="edit.mustache" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/templates/tasks/edit.mustache">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -74,28 +137,28 @@
           <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="kevin.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/public/kevin.html">
+          <file leaf-file-name="persist_spec.clj" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="true">
+          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/playground/core_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state relative-caret-position="149">
+                  <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -109,6 +172,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -126,14 +190,31 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/todo/core_test.clj" />
         <option value="$PROJECT_DIR$/templates/hello.mustache" />
-        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/todo/playground.clj" />
         <option value="$PROJECT_DIR$/spec/todo/playground_spec.clj" />
-        <option value="$PROJECT_DIR$/src/todo/core.clj" />
-        <option value="$PROJECT_DIR$/resources/public/kevin.html" />
-        <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
         <option value="$PROJECT_DIR$/src/playground/core.clj" />
+        <option value="$PROJECT_DIR$/resources/public/tasks.html" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks.mustache.html" />
+        <option value="$PROJECT_DIR$/src/todo/template.clj" />
         <option value="$PROJECT_DIR$/spec/playground/core_spec.clj" />
+        <option value="$PROJECT_DIR$/resources/templates/hello.mustache" />
+        <option value="$PROJECT_DIR$/resources/public/kevin.html" />
+        <option value="$PROJECT_DIR$/resources/templates/new.mustache.html" />
+        <option value="$PROJECT_DIR$/resources/templates/edit.mustache.html" />
+        <option value="$PROJECT_DIR$/resources/templates/edit.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/delete.mustache.html" />
+        <option value="$PROJECT_DIR$/resources/templates/delete.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/new.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/list.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
+        <option value="$PROJECT_DIR$/src/todo/core.clj" />
+        <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
+        <option value="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/todo/persist.clj" />
       </list>
     </option>
   </component>
@@ -184,6 +265,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="todo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="todo" />
@@ -272,6 +371,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -283,25 +404,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="Keybindings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../specs" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowTerminal.ShowToolbar" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/templates/tasks" />
       <recent name="$PROJECT_DIR$/src/playground" />
       <recent name="$PROJECT_DIR$/spec/playground" />
       <recent name="$PROJECT_DIR$/src/todo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1466704812063">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1467036158372">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.todo">
     <configuration default="false" name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="todo" />
@@ -660,6 +783,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="eed1504c-befc-410b-923c-025802dd37ea" name="Default" comment="" />
@@ -684,17 +810,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.49265605" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.4902081" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.50244796" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.48286414" order="11" side_tool="false" content_ui="tabs" x="107" y="479" width="845" height="282" />
+      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.48041615" order="11" side_tool="false" content_ui="tabs" x="107" y="479" width="845" height="282" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.497552" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986537" sideWeight="0.49625668" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.51713586" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.5195838" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21603428" sideWeight="0.506135" order="4" side_tool="false" content_ui="combo" />
@@ -710,6 +836,14 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -754,6 +888,7 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="90">
             <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -775,14 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/hello.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -811,10 +938,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
+    <entry file="file://$PROJECT_DIR$/resources/public/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -827,34 +962,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/hello.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/list.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        <state relative-caret-position="255">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/delete.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/new.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/edit.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/playground/core_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/template.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/todo/todo/persist_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding />
         </state>
       </provider>

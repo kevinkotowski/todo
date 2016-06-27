@@ -56,5 +56,5 @@
       (with-open [rdr (reader (:body response))]
         (doseq [line (line-seq rdr)]
           ;(println line)))))
-          (should= "<p>Kevin was here.</p>" line )))))
+          (should= "<p>Kevin was here.</p>" line)))))
 )
