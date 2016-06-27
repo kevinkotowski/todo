@@ -4,7 +4,6 @@
   (:use ring.middleware.resource)
   (:use ring.middleware.content-type)
   (:use ring.middleware.not-modified)
-  (:require [taoensso.carmine :as car :refer (wcar)])
   (:use clostache.parser))
 
 
@@ -82,3 +81,35 @@
   (run-jetty #'player {:port 54321 :join? false}))
 
 (use '[clojure.tools.namespace.repl :only (refresh)])
+
+
+(println "...starting redis play in playground.core")
+  (require '[redis-async.core :as redis-async])
+  (require '[redis-async.client :as client])
+  (require '[cheshire.core     :as cheshire])
+
+  (def redis (redis-async/make-pool {:hostname "localhost" :port 6379}))
+
+  (let [c1 (client/set redis "X" "TEST")
+        c2 (client/set redis "Y" "TEST2")
+        c3 (client/set redis "Z" (cheshire/encode {:name "Boo" :desc "Task"}) )
+        c4 (client/get redis "X")
+        c5 (client/get redis "Y")
+        c6 (client/get redis "Z")
+        c7 (client/get redis "Z")
+        ]
+    (println (client/<!! c4))
+    (println (client/<!! c5))
+    (println "name: >" (get (cheshire/decode (client/<!! c6) true) :name) "<" )
+    )
+
+
+  (def task-map
+    {:name "Kevin"
+     :desc "Description"})
+
+  (println "task-map: " task-map)
+  (def task-json (cheshire/encode task-map))
+  (def task-map2 (cheshire/decode task-json true))
+  (println task-map2)
+  (println (get task-map2 :name) )

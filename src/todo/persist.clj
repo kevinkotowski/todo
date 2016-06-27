@@ -1,36 +1,42 @@
-(ns todo.persist
-  )
+(ns todo.persist)
+  ;(:require [clojure.string :as string]))
 
 (require '[redis-async.core :as redis-async])
 (require '[redis-async.client :as client])
-(require '[clojure.data.json :as json])
+(require '[cheshire.core     :as cheshire])
 
-(def p (redis-async/make-pool {:hostname "localhost" :port 6379}))
+(def redis (redis-async/make-pool {:hostname "localhost" :port 6379}))
 
-(let [c1 (client/set p "X" "TEST")
-      c2 (client/set p "Y" "TEST2")
-      c3 (client/set p "Z" {:name "John" :age 30})
-      c4 (client/get p "X")
-      c5 (client/get p "Y")
-      c6 (client/get p "Z")
-      c7 (client/get p "Z")
+(let [ c1 (client/set redis "TEST:0" (cheshire/encode {:name "Boo" :desc "Boogy" :done true}) )
+       c2 (client/get redis "TEST:0")
+       ;x1 (client/set redis "ID" -1)
       ]
-  (println (client/<!! c4))
-  (println (client/<!! c5))
-  ;(println (:name c7))
-  (println "redis: " (client/<!! c7))
-  ;(println "json: " (json/write-str (sorted-map  '(client/<!! c6) )))
-
-  (println "json:  " (json/write-str (client/<!! c6)) )
-  ;(println "json:  " (json/read-str (client/<!! c6) :key-fn keyword ) )
-
-  ;(println "name:  " c6)
-  ;(println (:name (hash-map (client/<!! c6)) )  )
-  ;(println (hash-map ("key"  client/<!! c6) )  )
-  ;(println
-  ;  (into {}
-  ;        (for [[k v] (client/<!! c6)]
-  ;          [k v]))
-  ;  )
+  (def task (cheshire/decode (client/<!! c2) true))
+  (println "name: >" (get task :name) "<" )
+  (println "desc: >" (get task :desc) "<" )
+  (println "done: >" (get task :done) "<" )
   )
 
+(defn getId []
+  (def asyncID (client/get redis "ID") )
+  (if (some? asyncID)
+    (client/incr redis "ID")
+    (client/set redis "ID" 1) )
+  (def newAsyncID (client/get redis "ID") )
+  (Integer/parseInt (client/<!! newAsyncID))
+  )
+
+(defn countAll [todoset]
+  (def asyncCount (client/scard redis todoset) )
+  (client/<!! asyncCount)
+  )
+
+(defn create [todoset, desc]
+  (client/sadd redis todoset (cheshire/encode
+                                  {:id (getId) :done false :desc desc}) ) )
+
+(defn getAll [todoset]
+  (def asyncAll (client/smembers redis todoset) )
+  ;(mapv cheshire/encode (client/<!! asyncAll))
+  (mapv list (client/<!! asyncAll))
+  )

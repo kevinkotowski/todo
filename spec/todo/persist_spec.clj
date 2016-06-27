@@ -1,41 +1,51 @@
 (ns todo.persist-spec
-  (:require [todo.core :refer :all]
-            [todo.persist :refer :all]
+  (:require [todo.persist :as persist]
             [speclj.core :refer :all]
-            ;[monger.core :as mg]
-            ;[monger.collection :as mc]
-  ;(:import [org.bson.types ObjectId]
-  ;         [com.mongodb DB WriteConcern])
    )
 )
 
 (describe "persist module"
+  (def todoset "TEST")
   (it "proves that persist.core_spec works"
     (should= true true)
       )
 
+  (it "gets new ID"
+    (def oldID (persist/getId) )
+    (def newID (persist/getId) )
+    (def newerID (persist/getId) )
+    (should= newID (+ oldID 1))
+    (should= newerID (+ newID 1))
+      )
+
   (it "creates a new record"
-      ;(let [conn (mg/connect)
-      ;      db   (mg/get-db conn "test")]
-      ;  ;; with a generated document id, returns the complete
-      ;  ;; inserted document
-      ;  ;(mc/insert-and-return db "todo" {:name "John" :age 30})
-      ;  (mc/insert db "tasks" { :_id (ObjectId.) :first_name "John" :last_name "Lennon" })
-        )
+    (def countBefore (persist/countAll todoset) )
+    (should (persist/create todoset "New test task"))
+    (should (> (persist/countAll todoset) countBefore ))
+      )
 
   (it "gets all records"
-    ;(should= true true)
+    (def all (persist/getAll todoset))
+    (should= (persist/countAll todoset) (count all) )
+      ;(print (first all))
+      (doseq [x all] (println x))
+      ;(doseq [x all] (println (get x "id")))
       )
 
-  (it "gets a single record"
-    ;(should= true true)
-      )
+  ;(it "gets a single record"
+  ;  ;(should= true true)
+  ;    )
+  ;
+  ;(it "updates a record"
+  ;  ;(should= true true)
+  ;    )
+  ;
+  ;(it "deletes a record"
+  ;  ;(should= true true)
+  ;    )
 
-  (it "updates a record"
-    ;(should= true true)
-      )
-
-  (it "deletes a record"
-    ;(should= true true)
-      )
+  ;(it "deletes all records"
+  ;  ;(should= true true)
+  ;    )
+  ;
 )

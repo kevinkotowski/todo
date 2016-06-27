@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed1504c-befc-410b-923c-025802dd37ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/list.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/todo/persist.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/todo/template.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/replstate.xml" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/public/kevin.html" afterPath="$PROJECT_DIR$/resources/public/kevin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/hello.mustache" afterPath="$PROJECT_DIR$/resources/templates/hello.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/playground/core_spec.clj" afterPath="$PROJECT_DIR$/spec/playground/core_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/todo/core_spec.clj" afterPath="$PROJECT_DIR$/spec/todo/core_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/core.clj" afterPath="$PROJECT_DIR$/src/todo/core.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/todo/persist_spec.clj" afterPath="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/playground/core.clj" afterPath="$PROJECT_DIR$/src/playground/core.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/persist.clj" afterPath="$PROJECT_DIR$/src/todo/persist.clj" />
     </list>
     <ignored path="todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +33,18 @@
           <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/project.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="89">
+                  <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
@@ -53,8 +53,8 @@
           <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1">
-                  <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -63,8 +63,8 @@
           <file leaf-file-name="persist.clj" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+                <state relative-caret-position="584">
+                  <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -147,8 +147,8 @@
           <file leaf-file-name="persist_spec.clj" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+                <state relative-caret-position="465">
+                  <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -192,7 +192,6 @@
         <option value="$PROJECT_DIR$/templates/hello.mustache" />
         <option value="$PROJECT_DIR$/src/todo/playground.clj" />
         <option value="$PROJECT_DIR$/spec/todo/playground_spec.clj" />
-        <option value="$PROJECT_DIR$/src/playground/core.clj" />
         <option value="$PROJECT_DIR$/resources/public/tasks.html" />
         <option value="$PROJECT_DIR$/resources/templates/tasks.mustache.html" />
         <option value="$PROJECT_DIR$/src/todo/template.clj" />
@@ -210,10 +209,11 @@
         <option value="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
         <option value="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
         <option value="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
-        <option value="$PROJECT_DIR$/src/todo/core.clj" />
         <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
-        <option value="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
         <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/playground/core.clj" />
+        <option value="$PROJECT_DIR$/src/todo/core.clj" />
+        <option value="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
         <option value="$PROJECT_DIR$/src/todo/persist.clj" />
       </list>
     </option>
@@ -300,6 +300,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playground" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,11 +428,20 @@
       <recent name="$PROJECT_DIR$/src/todo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1467036158372">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1467069774940">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot; &quot;cheshire/generate-string({:name \&quot;Kevin\&quot; :desc \&quot;Description\&quot;})&quot; &quot;(use 'todo.persist)&quot;], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.todo">
     <configuration default="false" name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="todo" />
       <setting name="path" value="$PROJECT_DIR$/src/todo/core.clj" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/todo" />
+      <setting name="repl" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="persist" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="todo" />
+      <setting name="path" value="$PROJECT_DIR$/src/todo/persist.clj" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/todo" />
@@ -765,13 +778,15 @@
       <setting name="profiles" value="" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Clojure REPL.todo" />
       <item index="1" class="java.lang.String" itemvalue="Clojure Application.core" />
+      <item index="2" class="java.lang.String" itemvalue="Clojure Application.persist" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Clojure Application.core" />
+        <item index="1" class="java.lang.String" itemvalue="Clojure Application.persist" />
       </list>
     </recent_temporary>
   </component>
@@ -816,11 +831,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.50244796" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.48041615" order="11" side_tool="false" content_ui="tabs" x="107" y="479" width="845" height="282" />
+      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.4730722" order="11" side_tool="false" content_ui="tabs" x="107" y="479" width="845" height="282" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.497552" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49265605" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986537" sideWeight="0.49625668" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.5195838" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.52692777" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21603428" sideWeight="0.506135" order="4" side_tool="false" content_ui="combo" />
@@ -946,14 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/kevin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1034,34 +1041,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
+    <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="150">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
+    <entry file="file://$PROJECT_DIR$/src/playground/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        <state relative-caret-position="89">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="584">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding />
         </state>
       </provider>
