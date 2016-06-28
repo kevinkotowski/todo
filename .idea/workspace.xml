@@ -4,9 +4,11 @@
     <list default="true" id="eed1504c-befc-410b-923c-025802dd37ea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/replstate.xml" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" afterPath="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" afterPath="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/tasks/new.mustache" afterPath="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/todo/persist_spec.clj" afterPath="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/playground/core.clj" afterPath="$PROJECT_DIR$/src/playground/core.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/core.clj" afterPath="$PROJECT_DIR$/src/todo/core.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/persist.clj" afterPath="$PROJECT_DIR$/src/todo/persist.clj" />
     </list>
     <ignored path="todo.iws" />
@@ -50,21 +52,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
+          <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+                <state relative-caret-position="-181">
+                  <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="persist.clj" pinned="false" current-in-tab="true">
+          <file leaf-file-name="persist.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="584">
-                  <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -93,8 +95,8 @@
           <file leaf-file-name="list.mustache" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/templates/tasks/list.mustache">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+                <state relative-caret-position="195">
+                  <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -103,8 +105,8 @@
           <file leaf-file-name="new.mustache" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/templates/tasks/new.mustache">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -113,8 +115,8 @@
           <file leaf-file-name="delete.mustache" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/templates/tasks/delete.mustache">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                <state relative-caret-position="195">
+                  <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -134,21 +136,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="false">
+          <file leaf-file-name="core_spec.clj" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
+                <state relative-caret-position="89">
                   <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="persist_spec.clj" pinned="false" current-in-tab="true">
+          <file leaf-file-name="persist_spec.clj" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+                <state relative-caret-position="434">
+                  <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -205,16 +207,16 @@
         <option value="$PROJECT_DIR$/resources/templates/delete.mustache" />
         <option value="$PROJECT_DIR$/resources/templates/new.mustache" />
         <option value="$PROJECT_DIR$/resources/templates/tasks.mustache" />
-        <option value="$PROJECT_DIR$/resources/templates/tasks/list.mustache" />
-        <option value="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
-        <option value="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
-        <option value="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
         <option value="$PROJECT_DIR$/spec/todo/core_spec.clj" />
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/playground/core.clj" />
-        <option value="$PROJECT_DIR$/src/todo/core.clj" />
-        <option value="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
         <option value="$PROJECT_DIR$/src/todo/persist.clj" />
+        <option value="$PROJECT_DIR$/spec/todo/persist_spec.clj" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/new.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/list.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/edit.mustache" />
+        <option value="$PROJECT_DIR$/resources/templates/tasks/delete.mustache" />
+        <option value="$PROJECT_DIR$/src/todo/core.clj" />
       </list>
     </option>
   </component>
@@ -428,7 +430,7 @@
       <recent name="$PROJECT_DIR$/src/todo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1467069774940">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;(refresh)&quot; &quot;(boot)&quot; &quot;cheshire/generate-string({:name \&quot;Kevin\&quot; :desc \&quot;Description\&quot;})&quot; &quot;(use 'todo.persist)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1467140488959">{:repl-history {:ide [], :local [&quot;(require 'todo.core)&quot; &quot;(todo.core/foo Kevin)&quot; &quot;(app)&quot; &quot;(todo.core/handler \&quot;GET\&quot;)&quot; &quot;\n(todo.core/boot)&quot; &quot;(todo.core/boot)&quot; &quot;(todo.core/app \&quot;GET\&quot;)&quot; &quot;(todo.core/foo \&quot;Kevin\&quot;)&quot; &quot;(app \&quot;GET\&quot;)&quot; &quot;(handler \&quot;GET\&quot;)&quot; &quot;(a-test)&quot; &quot;(use 'todo.core-test)&quot; &quot;(foo \&quot;Kevin\&quot;)&quot; &quot;(use todo.core)&quot; &quot;(use '[clojure.tools.namespace.repl :only (refresh)])&quot; &quot;AbstractMethodError(refresh)&quot; &quot;(use )&quot; &quot;(run-specs)&quot; &quot;(use 'todo.core-spec)&quot; &quot;(test)&quot; &quot;(use 'todo.core)&quot; &quot;cheshire/generate-string({:name \&quot;Kevin\&quot; :desc \&quot;Description\&quot;})&quot; &quot;(use 'todo.persist)&quot; &quot;(count (getAll \&quot;TEST\&quot;))&quot; &quot;(getAll \&quot;TEST\&quot;)&quot; &quot;(pop (getAll \&quot;TEST\&quot;))&quot; &quot;(asyncAll (client/smembers redis todoset)\n          )&quot; &quot;(require '[redis-async.client :as client])&quot; &quot;((client/smembers redis \&quot;TEST\&quot;))&quot; &quot;(client/smembers redis \&quot;TEST\&quot;))&quot; &quot;(client/smembers redis \&quot;TEST\&quot;)&quot; &quot;(def asyncAll (client/smembers redis todoset) )&quot; &quot;(require '[cheshire.core     :as cheshire])&quot; &quot;(cheshire/decode (client/&lt;!! asyncAll))&quot; &quot;(print (client/&lt;!! asyncAll))&quot; &quot;(first (client/&lt;!! asyncAll))&quot; &quot;(map (client/&lt;!! asyncAll))&quot; &quot;(def asyncAll (client/smembers redis \&quot;TEST\&quot;) )&quot; &quot;(map print (client/&lt;!! asyncAll))&quot; &quot;cheshire/encode &quot; &quot;(def json (cheshire/encode \&quot;{'label': 'value', 'boo': 'hoo'\&quot;)) &quot; &quot;(def json (cheshire/encode \&quot;{'label': 'value', 'boo': 'hoo'}\&quot;))&quot; &quot;(print json)&quot; &quot;(cheshire/decode json)&quot; &quot;(refresh)&quot; &quot;(boot)&quot;], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.todo">
     <configuration default="false" name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="todo" />
@@ -822,7 +824,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1676" height="1027" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.4902081" order="9" side_tool="false" content_ui="tabs" />
@@ -835,7 +837,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49265605" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986537" sideWeight="0.49625668" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.52692777" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29882604" sideWeight="0.52692777" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21603428" sideWeight="0.506135" order="4" side_tool="false" content_ui="combo" />
@@ -977,50 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/list.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/delete.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/new.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/edit.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/playground/core_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/template.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1033,14 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1049,10 +1003,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+    <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        <state relative-caret-position="434">
+          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/todo/core_spec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1065,18 +1035,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/todo/persist_spec.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/new.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/persist.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/edit.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/list.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/template.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/tasks/delete.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>

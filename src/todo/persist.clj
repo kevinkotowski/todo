@@ -1,21 +1,10 @@
 (ns todo.persist)
-  ;(:require [clojure.string :as string]))
 
 (require '[redis-async.core :as redis-async])
 (require '[redis-async.client :as client])
-(require '[cheshire.core     :as cheshire])
 
 (def redis (redis-async/make-pool {:hostname "localhost" :port 6379}))
-
-(let [ c1 (client/set redis "TEST:0" (cheshire/encode {:name "Boo" :desc "Boogy" :done true}) )
-       c2 (client/get redis "TEST:0")
-       ;x1 (client/set redis "ID" -1)
-      ]
-  (def task (cheshire/decode (client/<!! c2) true))
-  (println "name: >" (get task :name) "<" )
-  (println "desc: >" (get task :desc) "<" )
-  (println "done: >" (get task :done) "<" )
-  )
+(def entity "tasks")
 
 (defn getId []
   (def asyncID (client/get redis "ID") )
@@ -23,20 +12,45 @@
     (client/incr redis "ID")
     (client/set redis "ID" 1) )
   (def newAsyncID (client/get redis "ID") )
-  (Integer/parseInt (client/<!! newAsyncID))
+  (Integer/parseInt (client/<!! newAsyncID) )
   )
 
-(defn countAll [todoset]
-  (def asyncCount (client/scard redis todoset) )
-  (client/<!! asyncCount)
+(defn countAll [todoenv]
+  (def query (str todoenv ":" entity "*") )
+  (def asyncKeys (client/keys redis query) )
+  (def keyVec (client/<!! asyncKeys) )
+  (count keyVec)
   )
 
-(defn create [todoset, desc]
-  (client/sadd redis todoset (cheshire/encode
-                                  {:id (getId) :done false :desc desc}) ) )
+(defn createOne [todoenv, desc]
+  (def compositeId (str todoenv ":" entity ":" (getId) ) )
+  (client/hmset redis compositeId "done" 0 "desc" desc)
+  (identity compositeId)
+  )
 
-(defn getAll [todoset]
-  (def asyncAll (client/smembers redis todoset) )
-  ;(mapv cheshire/encode (client/<!! asyncAll))
-  (mapv list (client/<!! asyncAll))
+(defn getAll [todoenv]
+  (def query (str todoenv ":" entity "*") )
+  (def asyncKeys (client/keys redis query) )
+  (client/<!! asyncKeys)
+  )
+
+(defn getOne [id]
+  (def asyncGetDone (client/hget redis id "done") )
+  (def asyncGetDesc (client/hget redis id "desc") )
+  (def done (client/<!! asyncGetDone) )
+  (def desc (client/<!! asyncGetDesc) )
+  (hash-map :done done :desc desc)
+  )
+
+(defn updateOne [id valueMap]
+  (client/hmset redis id "done" (:done valueMap) "desc" (:desc valueMap))
+  )
+
+(defn deleteOne [id]
+  (client/hdel redis id "done" "desc" )
+  )
+
+(defn deleteAll [todoenv]
+  (def all (getAll todoenv) )
+  (mapv deleteOne all)
   )
