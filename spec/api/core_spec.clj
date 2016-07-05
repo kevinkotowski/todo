@@ -13,7 +13,7 @@
     )
 
   (it "has an HTML safe pair to hash converter"
-      (let [])
+      ;(let [])
     (def nilVal "done=")
     (def zeroVal "done=0")
     (def textVal "desc=I+am+cool")
@@ -31,7 +31,16 @@
     (should= "I+am+cool" (api/toSafeVal textVal) )
     )
 
-  (it "creates a new record from HTML"
+  (it "creates a new record from safe string no done"
+      (println "-->no done: starting")
+          (let [ id (api/create db entity "desc=New+task")
+                 dummy (println "-->no done id: " id)
+                 task (api/read db entity id) ]
+                 (should= "done=0&desc=New+task" task )
+                 (should (string/starts-with? id (str db ":" entity) ) )
+          ) )
+
+  (it "creates a new record from safe string nil done"
     (def newHtml "done=&desc=New+task")
     (def id (api/create db entity newHtml) )
     (def task (api/read db entity id) )
@@ -75,10 +84,10 @@
     )
 
   (after-all "deletes all test records"
-    (def beforeCount (api/countAll db entity) )
-    (should (> beforeCount 0) )
+    ;(let [ beforeCount (api/countAll db entity) ]
+    ;  (should (> beforeCount 0) ) )
     (api/deleteAll db entity)
-    (def afterCount (api/countAll db entity) )
-    (should= 0 afterCount)
+    (let [ afterCount (api/countAll db entity) ]
+      (should= 0 afterCount) )
     )
 )

@@ -30,6 +30,7 @@
     (should= (newHash :desc) (task :desc) )
     (should (string/starts-with? id (str db ":tasks:") ) )
     (should (> (persist/countAll db entity) countBefore) )
+
     )
 
   (it "gets all records"
@@ -82,4 +83,5 @@
     (def afterCount (persist/countAll db entity) )
     (should= 0 afterCount)
     )
+
 )

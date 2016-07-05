@@ -18,15 +18,22 @@
   (def query (str db ":" entity "*") )
   (def asyncKeys (client/keys redis query) )
   (def keyVec (client/<!! asyncKeys) )
-  (count keyVec)
+  (if (= nil (count keyVec))
+    0
+    (count keyVec)
+    )
   )
 
 (defn createOne [db, entity, valueMap]
+  (println ">>>persist.createOne valueMap: " valueMap)
   (def compositeId (str db ":" entity ":" (getId) ) )
   (println "...createOne" compositeId valueMap)
   (client/hmset redis compositeId
                 "done" (if (= nil (:done valueMap) ) "0" (:done valueMap) )
                 "desc" (:desc valueMap) )
+  (println ">>>persist.createOne done: " (if (= nil (:done valueMap) ) "0" (:done valueMap) ))
+  (println ">>>persist.createOne desc: " (:desc valueMap))
+  (println ">>>persist.createOne Id: " (identity compositeId))
   (identity compositeId)
   )
 
@@ -37,11 +44,15 @@
   )
 
 (defn getOne [db, entity, id]
+  (println ">>>persist.getOne id: " id)
   (def asyncGetDone (client/hget redis id "done") )
   (def asyncGetDesc (client/hget redis id "desc") )
   (def done (client/<!! asyncGetDone) )
   (def desc (client/<!! asyncGetDesc) )
+  (println ">>>persist.getOne done: " done)
+  (println ">>>persist.getOne desc: " desc)
   (if (and (empty? done) (empty? desc))
+    ;(def response {:done nil :desc nil} )
     (def response nil)
     (def response (hash-map :done done :desc desc) )
     )

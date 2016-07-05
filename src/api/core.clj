@@ -20,13 +20,19 @@
   (if (empty? unsafeVal) "" (string/replace unsafeVal " " "+") ) )
 
 (defn convert [urlSafe]
-  ;(println "...api.convert urlSafe: " urlSafe)
-  (def htmlVector (split urlSafe #"&") )
-  ;(println "...split html: " htmlVector)
-  (def newHash (ref {}) )
-  (mapv #(dosync (ref-set newHash (merge @newHash (pairToHash %) ) ) ) htmlVector)
-  ;(println "...html hash: " @newHash)
-  (identity @newHash)
+  ;(if (= nil urlSafe)
+  ;  (identity urlSafe)
+  ;  (
+      (println "...api.convert urlSafe: " urlSafe)
+      (def htmlVector (split urlSafe #"&") )
+      (println "...api.convert split html: " htmlVector)
+      (def newHash (ref {}) )
+      (mapv #(dosync (ref-set newHash (merge @newHash (pairToHash %) ) ) ) htmlVector)
+      (println "...api.convert html hash: " @newHash)
+      (identity @newHash)
+  ;    )
+  ;  )
+  ;{:done "0" :desc "New task"}
   )
 
 (defn revert [oldMap]
@@ -43,8 +49,10 @@
 
 
 (defn create [db, entity, data]
-  (println "...api.create " data)
-  (persist/createOne db entity (convert data))
+  (println "...api.create before convert: " data)
+  (def convertedData (convert data))
+  (println "...api.create after convert: " convertedData)
+  (persist/createOne db entity convertedData)
   )
 
 (defn read [db, entity, id]

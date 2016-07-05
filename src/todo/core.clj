@@ -4,6 +4,7 @@
   (:use ring.middleware.resource)
   (:use ring.middleware.content-type)
   (:use ring.middleware.not-modified)
+  (:use ring.middleware.params)
   (:use clostache.parser)
   (:use [clojure.string :only (join split)])
   (:require [api.core :as api])
@@ -16,15 +17,19 @@
     (if (= (:request-method request) :post)
       (let [[root, api, entity, operation, id]
               (split (:uri request) #"\/")
-            body (str "POST::" operation " snatcher!")
-            response (handler request)]
+            body (:form-params request)]
+        (println "...todo.core.wrap-api-router body: " body)
+        (println "...todo.core.wrap-api-router params: " (:params request))
         (case operation
-            "create" (api/create db entity (:body request))
-            "update" (api/update db entity id (:body request))
+            "create" (api/create db entity body)
+            "update" (api/update db entity id body)
             "delete" (api/delete db entity id)
-            (def body (str "Bad operation: " operation) ))
-        (assoc response :body body) )
-      (let [response (handler request)] response ) ) ) )
+            (def body (str "Bad operation: " operation) ) )
+        {:status 200
+         :body body
+         :headers {"Content-Type" "text/plain"} }
+        )
+      (let [response (handler request)] response) ) ) )
 
 (defn wrap-router [handler]
   (fn [request]
@@ -65,6 +70,7 @@
        (wrap-api-router)
        (wrap-router)
        (wrap-home-redirect)
+       (wrap-params)
        (wrap-not-modified)
        (wrap-reload) ) )
 
