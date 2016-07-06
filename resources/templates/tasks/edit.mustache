@@ -5,10 +5,11 @@
     <title>Edit Task</title>
 </head>
 <body>
+    <a href="/">Home</a>
     <p>Edit this task...</p>
     <form action="/api/task/update" method="post">
-        <input type="hidden" name="id" value={{task.id}}>
-        Description: <input type="text" name="desc"/>
+        <input type="hidden" name="id" value={{id}}>
+        Description: <input type="text" name="desc" value="{{desc}}"/>
         <button type="submit">Save</button>
     </form>
 </body>

@@ -1,11 +1,11 @@
 (ns todo.core-spec
   (:require [todo.core :refer :all]
-            [ring.mock.request :as mock]
+            ;[ring.mock.request :as mock]
             ;[clojure.java.io :as io]
             [speclj.core :refer :all]
             )
-  (:use clojure.java.io)
-  (:import (java.io BufferedInputStream)))
+  ;(:use clojure.java.io)
+  (:import (java.io BufferedInputStream ByteArrayInputStream)))
 
 (defn mock-handler [request]
   {:status 200
@@ -15,49 +15,62 @@
   (-> mock-handler
       (wrap-api-router) ) )
 
-(defn get-bytes [inString]
-  (BufferedInputStream. (make-input-stream inString (:encoding "UTF-8")))
-  )
-
 (describe "todo app"
   (it "redirect home to /task/list template"
     (let [request (hash-map :uri "/"
                             :request-method :get)
           response (app request)]
+
+      (println "...todo.core_spec redirect body: " (:body response) )
       (should-be true? (.contains (:body response) "<title>Tasks</title>"))))
 
-  (it "isolated wrap-api middleware testing"
-    (let [request (hash-map :uri "/api/task/create"
-                            :form-params (get-bytes "ascii=kev")
+  (it "isolated wrap-api-router middleware testing"
+    (let [request (hash-map :uri "/api/tasks/create"
+                            :params {"done" "0" "desc" "Kevin"}
                             :request-method :post)
-          response (mock-api request)]
-      (should= "POST::update snatcher!"  (:body response)))
-    ;(let [request (hash-map :uri "/api/task/update/11111"
-    ;                        :request-method :post)
-    ;      response (mock-api request)]
-    ;  (should= "POST::update snatcher!"  (:body response)))
+          response (mock-api request)
+          id (:body response)]
+      (println "...task_spec_api id: " id)
+      (should (.contains (:body response) ":tasks:"))
+      (let [request (hash-map :uri (str "/api/tasks/update/" id)
+                              :params {"done" 1 "desc" "Kevin updated"}
+                              :request-method :post)
+            response (mock-api request)]
+        ;(println "...task_spec_api response: " response)
+        (should= id (:body response))
+        (let [request (hash-map :uri (str "/api/task/delete/" id)
+                                :request-method :post
+                                )
+              response (mock-api request)]
+          (should= 302 (:status response))
+        ))))
+
+  (it "template middleware routes to templates directory"
+    (let [request (hash-map :uri "/api/tasks/create"
+                            :params {"done" 0 "desc" "Template test"}
+                            :request-method :post)
+          response (mock-api request)
+          id (:body response)
+          ]
+      (println "...task_spec templates id: " id)
+      (let [request (hash-map :uri (str "/api/tasks/list")
+                              :request-method :get)
+            response (mock-api request)]
+        ;(println "...task_spec template: " response)
+        ;(should-be true? (.contains (:body response) "<title>Edit Task</title>"))
+         )
       )
+    ;(let [request (hash-map :uri "/tasks/new"
+    ;                        :request-method :get)
+    ;      response (app request)]
+    ;  ;(println (:status response))))
+    ;  (should-be true? (.contains (:body response) "<title>New Task</title>"))))
 
-  ;(it "isolated wrap-api middleware DELETE testing"
-  ;  (let [request (hash-map :uri "/api/task/delete/378901"
-  ;                          :request-method :post
-  ;                          :form-params (get-bytes "delete=snatcher")
-  ;                          ;:form-params (bytes (byte-array (map (comp byte int) "ascii=kev")))
-  ;                          )
-  ;        response (mock-api request)]
-  ;    (should= "POST::delete snatcher!"  (:body response))))
-
-  (it "template middleware routes no ID to templates directory"
-    (let [request (hash-map :uri "/tasks/new"
-                            :request-method :get)
-          response (app request)]
-      ;(println (:status response))))
-      (should-be true? (.contains (:body response) "<title>New Task</title>"))))
-
-  (it "template middleware routes with ID to templates directory"
-    (let [request (hash-map :uri "/tasks/edit/328947"
-                            :request-method :get)
-          response (app request)]
-      ;(println (:status response))))
-      (should-be true? (.contains (:body response) "<title>Edit Task</title>") )))
+  ;(it "template middleware routes with ID to templates directory"
+  ;  (let [request (hash-map :uri "/tasks/edit/328947"
+  ;                          :request-method :get)
+  ;        response (app request)]
+  ;    ;(println (:status response))))
+  ;    (should-be true? (.contains (:body response) "<title>Edit Task</title>") ))
+   )
 )

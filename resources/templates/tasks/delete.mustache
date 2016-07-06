@@ -5,9 +5,10 @@
     <title>Delete</title>
 </head>
 <body>
-    <form action="/api/task/delete" method="post">
-        <input type="hidden" name="id" value={{task.id}}>
-        <p>Description: {{task.desc}}<p/>
+    <a href="/">Home</a>
+    <form action="/api/tasks/delete" method="post">
+        <input type="hidden" name="id" value={{id}}>
+        <p>Description: {{desc}}<p/>
         <p>Are you sure?</p>
         <input type="submit" name="Delete"/>
     </form>

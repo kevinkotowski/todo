@@ -8,43 +8,53 @@
   (:use clostache.parser)
   (:use [clojure.string :only (join split)])
   (:require [api.core :as api])
+  (:require [present.tasks :as present])
  )
 
 (def db "TODO")
 
 (defn wrap-api-router [handler]
   (fn [request]
+    (println "API ACCESS:" (:request-method request) (:uri request) )
+    ;(println "API ACCESS:" request)
     (if (= (:request-method request) :post)
       (let [[root, api, entity, operation, id]
               (split (:uri request) #"\/")
-            body (:form-params request)]
-        (println "...todo.core.wrap-api-router body: " body)
-        (println "...todo.core.wrap-api-router params: " (:params request))
+            body (:params request)]
+        ;(println "...todo.core.wrap-api-router params: " body)
+        ;(println "...todo.core.wrap-api-router operation: " operation)
         (case operation
-            "create" (api/create db entity body)
-            "update" (api/update db entity id body)
-            "delete" (api/delete db entity id)
-            (def body (str "Bad operation: " operation) ) )
-        {:status 200
-         :body body
-         :headers {"Content-Type" "text/plain"} }
-        )
+          "create" (def newId (api/create db entity body) )
+          "update" (api/update db entity id body)
+          "delete" (api/delete db entity id)
+            )
+        {:status 302
+         :body (if (empty? id) newId id)
+         :headers {"Content-Type" "text/plain" "Location" "/"} }
+       ;(let [response (handler request)] response)
+            )
       (let [response (handler request)] response) ) ) )
 
-(defn wrap-router [handler]
+(defn wrap-template-router [handler]
   (fn [request]
-    ;(println "ACCESS:" (:request-method request) (:uri request) )
+    (println "TEMPLATE ACCESS:" (:request-method request) (:uri request) )
     (if (= (:request-method request) :get)
-      (let [template (let [[root, entity, operation, id]
-                           (split (:uri request) #"\/")]
-                       (str entity "/" operation) )
-                       ;(str "tasks/edit") )
-            path (str "templates/" template ".mustache")
+      (let [[root, entity, operation, id]
+            (split (:uri request) #"\/")
+            template (str entity "/" operation)
             response (handler request)
+            path (str "templates/" template ".mustache")
+            dummy (println "...todo.core wrap-template-router path: " + path)
+            ;body (render-resource path {})
+            file (clojure.java.io/resource path)
+            body (slurp file)
+            ;xdummy (println "...todo.core wrap-template-router body: " + body)
             response (assoc-in response [:headers "Content-Type"] "text/html")
-            response (assoc response :body (render-resource path {:name "Kevin"}))
+            response (assoc response :body body)
+            response (present/transform response id)
             ]
-        response )
+        (identity response)
+        )
       (let [response (handler request)] response) ) ) )
 
 (defn wrap-home-redirect [handler]
@@ -68,8 +78,9 @@
        (wrap-resource "public")
        (wrap-content-type)
        (wrap-api-router)
-       (wrap-router)
+       (wrap-template-router)
        (wrap-home-redirect)
+       ;(wrap-keyword-params)
        (wrap-params)
        (wrap-not-modified)
        (wrap-reload) ) )

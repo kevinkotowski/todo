@@ -12,16 +12,16 @@
     (should= true true)
     )
 
-  (it "has an HTML safe pair to hash converter"
-      ;(let [])
-    (def nilVal "done=")
-    (def zeroVal "done=0")
-    (def textVal "desc=I+am+cool")
-    (should= {:done nil} (api/pairToHash nilVal))
-    (should= {:done "0"} (api/pairToHash zeroVal))
-    (should= {:desc "I am cool"} (api/pairToHash textVal))
-    )
-
+  ;(it "has an HTML safe pair to hash converter"
+  ;    ;(let [])
+  ;  (def nilVal "done=")
+  ;  (def zeroVal "done=0")
+  ;  (def textVal "desc=I+am+cool")
+  ;  (should= {:done nil} (api/pairToHash nilVal))
+  ;  (should= {:done "0"} (api/pairToHash zeroVal))
+  ;  (should= {:desc "I am cool"} (api/pairToHash textVal))
+  ;  )
+  ;
   (it "has a val to URL safe converter"
     (def nilVal nil)
     (def zeroVal "0")
@@ -32,19 +32,20 @@
     )
 
   (it "creates a new record from safe string no done"
-      (println "-->no done: starting")
-          (let [ id (api/create db entity "desc=New+task")
-                 dummy (println "-->no done id: " id)
-                 task (api/read db entity id) ]
-                 (should= "done=0&desc=New+task" task )
-                 (should (string/starts-with? id (str db ":" entity) ) )
-          ) )
+      ;(println "-->no done: starting")
+      ;    (let [ id (api/create db entity "desc=New+task")
+        (let [ id (api/create db entity {"desc" "New task"} )
+               ;dummy (println "-->no done id: " id)
+               task (api/read db entity id) ]
+               (should (string/starts-with? task "done=0&desc=New+task") )
+               (should (string/starts-with? id (str db ":" entity) ) )
+        ) )
 
   (it "creates a new record from safe string nil done"
-    (def newHtml "done=&desc=New+task")
-    (def id (api/create db entity newHtml) )
+    ;(def newHtml "done=&desc=New+task")
+    (def id (api/create db entity {"done" nil "desc" "New task"}) )
     (def task (api/read db entity id) )
-    (should= "done=0&desc=New+task" task )
+    (should (string/starts-with? task "done=0&desc=New+task") )
     (should (string/starts-with? id (str db ":" entity) ) )
     )
 
@@ -54,29 +55,25 @@
     )
 
   (it "gets a single record"
-    (def desc (str "desc=Single+task") )
-    (def id (api/create db entity desc) )
+    (def id (api/create db entity {"desc" "Single task"}) )
     (def task (api/read db entity id) )
-    (should= (str "done=0&" desc)  task )
+    (should (string/starts-with? task "done=0&desc=Single+task") )
     )
 
   (it "updates a record"
-    (let  [desc (str "desc=Update+task")
-           newDesc (str "desc=Updated+description")
-           id (api/create db entity desc)
+    (let  [id (api/create db entity {"done" 0 "desc" "Original task"})
            task (api/read db entity id) ]
-          (should= (str "done=0&" desc) task )
-          (api/update db entity id (str "done=1&" newDesc) )
+          (should (string/starts-with? task "done=0&desc=Original+task") )
+          (api/update db entity id {"done" 1 "desc" "Updated description"} )
           (let [updatedTask (api/read db entity id)]
-            (should= (str "done=1&" newDesc) updatedTask) ) )
+            (should (string/starts-with? updatedTask "done=1&desc=Updated+description") ) ) )
     )
 
   (it "deletes a record"
-    (def desc (str "desc=Delete+task") )
-    (def id (api/create db entity desc) )
+    (def id (api/create db entity {"desc" "Delete task"}) )
     (def task (api/read db entity id) )
     ; proves record was created successfully before we delete it
-    (should= (str "done=0&" desc) task )
+    (should (string/starts-with? task "done=0&desc=Delete+task") )
 
     (api/delete db entity id)
     (def deletedTask (api/read db entity id) )

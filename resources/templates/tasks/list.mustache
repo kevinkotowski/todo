@@ -13,15 +13,17 @@
             <td>ID</td>
             <td>Description</td>
         </tr>
-        <tr>
-            <td>
-                <a href="tasks/edit/{{id}}">edit</a>
-                <a href="tasks/delete/{{id}}">delete</a>
-            </td>
-            <td><input type="checkbox"/></td>
-            <td>{{id}}</td>
-            <td>{{desc}}</td>
-        </tr>
+        {{#tasks}}
+            <tr>
+                <td>
+                    <a href="tasks/edit/{{id}}">edit</a>
+                    <a href="tasks/delete/{{id}}">delete</a>
+                </td>
+                <td><input type="checkbox"/></td>
+                <td>{{id}}</td>
+                <td>{{desc}}</td>
+            </tr>
+        {{/tasks}}
     </table>
     <p><a href="tasks/new">new</a></p>
 </body>
