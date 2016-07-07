@@ -29,8 +29,6 @@
               testResponse {:body "Real {{id}}, you are {{done}} when {{desc}}"}
               transformed (present/transform testResponse id)
               ]
-          ;(println "...present.task_spec id: " id)
-          ;(println "...present.task_spec single transformed: " (:body transformed) )
           (should (.contains (:body transformed) "Real TODO:tasks:" ) )
           (should (.contains (:body transformed) "you are 0 when Real task") )
           ) )
@@ -47,11 +45,7 @@
               testResponse {:body "{{#tasks}}Multiple {{id}}, task {{desc}} is {{done}}.\n{{/tasks}}"}
               transformed (present/transform testResponse nil)
               ]
-          ;(println "...present.task_spec firstId: " firstId)
-          ;(println "...present.task_spec secondId: " secondId)
-          ;(println "...present.task_spec multiple transformed: " transformed)
           (should (.contains (:body transformed) "Multiple TODO:tasks:") )
           (should (.contains (:body transformed) firstId) )
-          (should (.contains (:body transformed) secondId) )
-          ) )
+          (should (.contains (:body transformed) secondId) ) ) )
 )

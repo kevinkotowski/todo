@@ -36,8 +36,6 @@
   (it "gets all records"
     (def all (persist/getAllIds db entity) )
     (should= (persist/countAll db entity) (count all) )
-    ;(println (nth all 4) )
-    ;(println (count all) )
     )
 
   (it "gets a single record"
@@ -83,5 +81,4 @@
     (def afterCount (persist/countAll db entity) )
     (should= 0 afterCount)
     )
-
 )

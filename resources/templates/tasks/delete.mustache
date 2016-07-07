@@ -6,7 +6,7 @@
 </head>
 <body>
     <a href="/">Home</a>
-    <form action="/api/tasks/delete" method="post">
+    <form action="/api/tasks/delete/{{id}}" method="post">
         <input type="hidden" name="id" value={{id}}>
         <p>Description: {{desc}}<p/>
         <p>Are you sure?</p>

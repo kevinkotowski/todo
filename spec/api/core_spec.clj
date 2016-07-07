@@ -12,16 +12,6 @@
     (should= true true)
     )
 
-  ;(it "has an HTML safe pair to hash converter"
-  ;    ;(let [])
-  ;  (def nilVal "done=")
-  ;  (def zeroVal "done=0")
-  ;  (def textVal "desc=I+am+cool")
-  ;  (should= {:done nil} (api/pairToHash nilVal))
-  ;  (should= {:done "0"} (api/pairToHash zeroVal))
-  ;  (should= {:desc "I am cool"} (api/pairToHash textVal))
-  ;  )
-  ;
   (it "has a val to URL safe converter"
     (def nilVal nil)
     (def zeroVal "0")
@@ -32,17 +22,13 @@
     )
 
   (it "creates a new record from safe string no done"
-      ;(println "-->no done: starting")
-      ;    (let [ id (api/create db entity "desc=New+task")
         (let [ id (api/create db entity {"desc" "New task"} )
-               ;dummy (println "-->no done id: " id)
                task (api/read db entity id) ]
                (should (string/starts-with? task "done=0&desc=New+task") )
                (should (string/starts-with? id (str db ":" entity) ) )
         ) )
 
   (it "creates a new record from safe string nil done"
-    ;(def newHtml "done=&desc=New+task")
     (def id (api/create db entity {"done" nil "desc" "New task"}) )
     (def task (api/read db entity id) )
     (should (string/starts-with? task "done=0&desc=New+task") )
@@ -72,7 +58,6 @@
   (it "deletes a record"
     (def id (api/create db entity {"desc" "Delete task"}) )
     (def task (api/read db entity id) )
-    ; proves record was created successfully before we delete it
     (should (string/starts-with? task "done=0&desc=Delete+task") )
 
     (api/delete db entity id)
@@ -81,8 +66,6 @@
     )
 
   (after-all "deletes all test records"
-    ;(let [ beforeCount (api/countAll db entity) ]
-    ;  (should (> beforeCount 0) ) )
     (api/deleteAll db entity)
     (let [ afterCount (api/countAll db entity) ]
       (should= 0 afterCount) )

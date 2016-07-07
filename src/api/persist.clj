@@ -25,31 +25,22 @@
   )
 
 (defn createOne [db, entity, valueMap]
-  ;(println ">>>persist.createOne: " valueMap)
-  ;(println ">>>persist.createOne: " (:desc valueMap) )
   (def compositeId (str db ":" entity ":" (getId) ) )
   (client/hmset redis compositeId
                 "done" (if (= nil (:done valueMap) ) "0" (:done valueMap) )
                 "desc" (:desc valueMap) )
-  (println ">>>persist.createOne compositeId: " compositeId)
   (identity compositeId)
   )
 
 (defn getOne [db, entity, id]
-  ;(println ">>>persist.getOne id: " id)
   (def asyncGetDone (client/hget redis id "done") )
   (def asyncGetDesc (client/hget redis id "desc") )
   (def done (client/<!! asyncGetDone) )
   (def desc (client/<!! asyncGetDesc) )
-  ;(println ">>>persist.getOne done: " done)
-  ;(println ">>>persist.getOne desc: " desc)
   (if (and (empty? done) (empty? desc))
-    ;(def response {:done nil :desc nil} )
     (def response nil)
     (def response (hash-map :id (str id) :done (str done) :desc (str desc) ) )
     )
-  ;(println "...getOne" id response)
-  ;(assoc response :id id)
   (identity response)
   )
 
@@ -68,14 +59,12 @@
   )
 
 (defn updateOne [db, entity, id, valueMap]
-  ;(println "...updateOne" id valueMap)
   (client/hmset redis id
                 "done" (if (= nil (:done valueMap) ) "0" (:done valueMap) )
                 "desc" (:desc valueMap))
   )
 
 (defn deleteOne [db, entity, id]
-  ;(println "...deleteOne:" id)
   (client/hdel redis id "done" "desc" )
   )
 
